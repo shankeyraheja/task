@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "public": true,
-  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
-  "routes": [{ "src": "/(.*)", "dest": "/$1" }],
+  "builds": [{ "src": "**/*", "use": "@vercel/static" }],
+  "cleanUrls": true,
   "headers": [
     {
-      "source": "/(.*)\\.(js|css|webp|jpg|png)",
+      "source": "/(.*)\\.(js|css|webp|jpg|png|svg)",
       "headers": [
         {
           "key": "Cache-Control",
